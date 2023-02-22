@@ -1,6 +1,6 @@
 # batch size 6 for 16 GB GPU
 
-mnt_dir="/home/codereview"
+mnt_dir="/content/CodeReviewerClean"
 
 # You may change the following block for multiple gpu training
 MASTER_HOST=localhost && echo MASTER_HOST: ${MASTER_HOST}
