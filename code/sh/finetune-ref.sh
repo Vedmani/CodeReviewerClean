@@ -23,10 +23,10 @@ bash test_nltk.sh
 
 python -m torch.distributed.launch --nproc_per_node ${PER_NODE_GPU} --node_rank=${RANK} --nnodes=${NODES} --master_addr=${MASTER_HOST} --master_port=${MASTER_PORT} ../run_finetune_ref.py  \
   --train_epochs 30 \
-  --model_name_or_path microsoft/codereviewer \
-  --output_dir ../../save/ref \
-  --train_filename ../../data/ref-train.jsonl \
-  --dev_filename ../../data/ref-valid.jsonl \
+  --model_name_or_path /content/model \
+  --output_dir /content/finetuned_model \
+  --train_filename /content/data/Code_Refinement/ref-train.jsonl \
+  --dev_filename /content/data/Code_Refinement/ref-valid.jsonl \
   --max_source_length 200 \
   --max_target_length 200 \
   --train_batch_size 6 \
